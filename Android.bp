@@ -190,7 +190,7 @@ android_library {
 // Build rule for Launcher3 app.
 //
 android_app {
-    name: "Launcher3",
+    name: "AfterHome",
 
     static_libs: [
         "Launcher3CommonDepsLib",
@@ -323,7 +323,7 @@ android_library {
 
 // Build rule for Launcher3 Go app for Android Go devices.
 android_app {
-    name: "Launcher3Go",
+    name: "AfterHomeGo",
 
     static_libs: ["Launcher3CommonDepsLib"],
 
@@ -349,6 +349,7 @@ android_app {
         "Launcher2",
         "Launcher3",
         "Launcher3QuickStep",
+        "Launcher3Go",
     ],
     required: ["privapp_whitelist_com.android.launcher3"],
 
@@ -366,7 +367,7 @@ android_app {
 
 // Build rule for Quickstep app.
 android_app {
-    name: "Launcher3QuickStep",
+    name: "AfterHomeQuickStep",
 
     static_libs: ["Launcher3QuickStepLib"],
     optimize: {
@@ -383,6 +384,7 @@ android_app {
         "Home",
         "Launcher2",
         "Launcher3",
+        "Launcher3QuickStep",
     ],
     required: ["privapp_whitelist_com.android.launcher3"],
 
@@ -402,7 +404,7 @@ android_app {
 
 // Build rule for Launcher3 Go app with quickstep for Android Go devices.
 android_app {
-    name: "Launcher3QuickStepGo",
+    name: "AfterHomeQuickStepGo",
 
     static_libs: [
         "SystemUI-statsd",
@@ -434,6 +436,7 @@ android_app {
         "Launcher2",
         "Launcher3",
         "Launcher3QuickStep",
+        "Launcher3QuickStepGo",
     ],
     required: ["privapp_whitelist_com.android.launcher3"],
 
