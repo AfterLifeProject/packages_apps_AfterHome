@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The Android Open Source Project
+ * Copyright (C) 2019 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,18 +16,8 @@
 
 package com.android.launcher3;
 
-public final class BuildConfig {
-    public static final String APPLICATION_ID = "com.android.launcher3";
+import com.android.launcher3.uioverrides.QuickstepLauncher;
 
-    public static final boolean IS_STUDIO_BUILD = false;
-    /**
-     * Flag to state if the QSB is on the first screen and placed on the top,
-     * this can be overwritten in other launchers with a different value, if needed.
-     */
-    public static final boolean QSB_ON_FIRST_SCREEN = false;
-
-    /**
-     * Flag to control various developer centric features
-     */
-    public static final boolean IS_DEBUG_DEVICE = false;
+public class AfterlifeLauncher extends QuickstepLauncher {
+    
 }

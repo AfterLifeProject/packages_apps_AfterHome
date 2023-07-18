@@ -60,8 +60,6 @@
     <uses-permission android:name="android.permission.REGISTER_STATS_PULL_ATOM" />
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-    <permission android:name="com.google.android.apps.nexuslauncher.permission.QSB" android:protectionLevel="signatureOrSystem"/>
-    <uses-permission android:name="com.google.android.apps.nexuslauncher.permission.QSB"/>
 
     <!-- Parallel space -->
     <uses-permission android:name="android.permission.MANAGE_PARALLEL_SPACES" />
