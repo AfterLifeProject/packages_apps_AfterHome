@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Application name -->
-    <string name="droidx_app_name" translatable="false">DroidX-UI Launcher</string>
+    <string name="afterlife_app_name" translatable="false">AfterLife Home</string>
 
     <!-- Folder titles -->
     <string name="google_folder_title" translatable="false">Google</string>
