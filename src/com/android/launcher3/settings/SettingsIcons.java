@@ -49,8 +49,8 @@ import com.android.launcher3.LauncherFiles;
 import com.android.launcher3.LauncherPrefs;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
-import com.android.launcher3.droidx.icon.IconPackStore;
-import com.android.launcher3.droidx.icon.IconPackSettingsActivity;
+import com.android.launcher3.afterlife.icon.IconPackStore;
+import com.android.launcher3.afterlife.icon.IconPackSettingsActivity;
 import com.android.launcher3.model.WidgetsModel;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;

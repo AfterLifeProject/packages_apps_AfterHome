@@ -32,7 +32,7 @@
     <string name="recents_settings_fragment_name" translatable="false">com.android.launcher3.settings.SettingsRecents$RecentsSettingsFragment</string>
 
     <!-- Icon pack -->
-    <string name="icon_pack_settings_class" translatable="false">com.android.launcher3.droidx.icon.IconPackSettingsFragment</string>
+    <string name="icon_pack_settings_class" translatable="false">com.android.launcher3.afterlife.icon.IconPackSettingsFragment</string>
 
     <!-- Quickspace -->
     <item type="id" name="reserved_container_workspace" />

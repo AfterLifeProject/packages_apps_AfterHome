@@ -204,7 +204,7 @@
     <string name="quickspace_date_format_minimalistic" translatable="false">EEEE, MMMM d</string>
 
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
-    <string name="quick_event_rom_intro_welcome" translatable="false">Welcome to DroidX-UI Family ♥♥♥</string>
+    <string name="quick_event_rom_intro_welcome" translatable="false">Welcome to AfterLife Project</string>
     <string name="quick_event_rom_intro_welcome_ext" translatable="false">Something NEW!</string>
     <string-array name="welcome_message_variants" translatable="false">
         <item>Have a great day!</item>
@@ -306,7 +306,7 @@
     </string-array>
     <string-array name="quickspace_psa_midnight">
         <item>Sleep defficiency is bad for your health.</item>
-        <item>Don\'t forget to stay hydrated.</item>
+        <item>Stop masturbating.</item>
         <item>Being sleep deficit can break melatonin production.</item>
         <item>It is midnight right now.</item>
         <item>Sleeping late is not healthy.</item>
@@ -320,22 +320,22 @@
         <item>There are easter eggs hidden on this ROM.</item>
         <item>Try checking the weather settings.</item>
         <item>Try to avoid UV rays during noon.</item>
-        <item>Stay Hydrated!</item>
+        <item>There will be life after death</item>
         <item>Pringles aren\'t actually potato chips..</item>
         <item>Laughing can increase bloodflow.</item>
         <item>Coffee contains antioxidants.</item>
-        <item>Ketchup was once sold as medicine.</item>
+        <item>From Indonesia with Love.</item>
         <item>Cotton candy was invented by a dentist.</item>
-        <item>Don\'t skip your meal!</item>
+        <item>Udud mana udud</item>
         <item>Remember to check device\'s battery levels!</item>
         <item>Check your email/messages.</item>
         <item>Check your to-do list if you have one.</item>
         <item>You can disable quickspace via home settings.</item>
         <item>Go get them!</item>
-        <item>Time to buy some rice!</item>
+        <item>Sleep less and drink more coffee</item>
         <item>Time for lunch!</item>
-        <item>Kalamay is made of glutinous rice.</item>
-        <item>All white rice starts brown.</item>
+        <item>Whan When Whan When</item>
+        <item>Pray for Rempang Galang</item>
         <item>Want some soda?</item>
         <item>Always bring water to stay hydrated.</item>
         <item>Space smells like seared steak..</item>

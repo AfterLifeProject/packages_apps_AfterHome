@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.launcher3.droidx.settings;
+package com.android.launcher3.afterlife.settings;
 
 import android.content.Context;
 import android.os.Bundle;

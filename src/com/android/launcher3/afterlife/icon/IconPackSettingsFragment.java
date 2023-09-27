@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.launcher3.droidx.icon;
+package com.android.launcher3.afterlife.icon;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -30,8 +30,8 @@ import android.view.ViewGroup;
 import androidx.preference.Preference;
 
 import com.android.launcher3.R;
-import com.android.launcher3.droidx.settings.RadioPreference;
-import com.android.launcher3.droidx.settings.RadioSettingsFragment;
+import com.android.launcher3.afterlife.settings.RadioPreference;
+import com.android.launcher3.afterlife.settings.RadioSettingsFragment;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
