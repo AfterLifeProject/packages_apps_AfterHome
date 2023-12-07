@@ -1,89 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2015 Google Inc.
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-
 <androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:launcher="http://schemas.android.com/apk/res-auto">
-
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <Preference
-        android:key="icons"
-        android:title="@string/icons_category_title"
-        android:summary="@string/icons_category_summary"
         android:icon="@drawable/ic_settings_icons"
-        android:layout="@layout/settings_layout">
-    <intent
-            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+        android:layout="@layout/settings_layout"
+        android:title="@string/icons_category_title"
+        android:key="icons"
+        app:layout="@layout/afl_preference_top_card"
+        android:summary="@string/icons_category_summary">
+        <intent
             android:targetPackage="com.android.launcher3"
-            android:targetClass="com.android.launcher3.settings.SettingsIcons" />
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetClass="com.android.launcher3.settings.SettingsIcons"/>
     </Preference>
-
     <Preference
-        android:key="home_screen"
-        android:title="@string/home_category_title"
-        android:summary="@string/home_category_summary"
         android:icon="@drawable/ic_settings_homescreen"
-        android:layout="@layout/settings_layout">
-    <intent
-            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+        android:layout="@layout/settings_layout"
+        android:title="@string/home_category_title"
+        app:layout="@layout/afl_preference_middle_card"
+        android:key="home_screen"
+        android:summary="@string/home_category_summary">
+        <intent
             android:targetPackage="com.android.launcher3"
-            android:targetClass="com.android.launcher3.settings.SettingsHomescreen" />
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetClass="com.android.launcher3.settings.SettingsHomescreen"/>
     </Preference>
-
     <Preference
-        android:key="app_drawer"
-        android:title="@string/app_drawer_category_title"
-        android:summary="@string/app_drawer_category_summary"
         android:icon="@drawable/ic_settings_appdrawer"
-        android:layout="@layout/settings_layout">
-    <intent
-            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+        android:layout="@layout/settings_layout"
+        android:title="@string/app_drawer_category_title"
+        android:key="app_drawer"
+        app:layout="@layout/afl_preference_middle_card"
+        android:summary="@string/app_drawer_category_summary">
+        <intent
             android:targetPackage="com.android.launcher3"
-            android:targetClass="com.android.launcher3.settings.SettingsAppDrawer" />
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetClass="com.android.launcher3.settings.SettingsAppDrawer"/>
     </Preference>
-
     <Preference
-        android:key="recents"
-        android:title="@string/recents_category_title"
-        android:summary="@string/recents_category_summary"
         android:icon="@drawable/ic_settings_recents"
-        android:layout="@layout/settings_layout">
-    <intent
-            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+        android:layout="@layout/settings_layout"
+        android:title="@string/recents_category_title"
+        android:key="recents"
+        app:layout="@layout/afl_preference_middle_card"
+        android:summary="@string/recents_category_summary">
+        <intent
             android:targetPackage="com.android.launcher3"
-            android:targetClass="com.android.launcher3.settings.SettingsRecents" />
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetClass="com.android.launcher3.settings.SettingsRecents"/>
     </Preference>
-
-    <Preference
-        android:key="pref_suggestions"
+    <!-- <Preference
+        android:icon="@drawable/ic_settings_suggestions"
         android:title="@string/suggestion_pref_screen_title"
-        android:summary="@string/suggestion_pref_screen_desc"
-        android:icon="@drawable/ic_settings_suggestions">
-        <intent android:action="android.settings.ACTION_CONTENT_SUGGESTIONS_SETTINGS" />
-    </Preference>
-
+        android:key="pref_suggestions"
+        app:layout="@layout/afl_preference_middle_card"
+        android:summary="@string/suggestion_pref_screen_desc">
+        <intent android:action="android.settings.ACTION_CONTENT_SUGGESTIONS_SETTINGS"/>
+    </Preference> -->
     <Preference
-        android:key="miscellaneous"
-        android:title="@string/misc_category_title"
-        android:summary="@string/misc_category_summary"
         android:icon="@drawable/ic_settings_misc"
-        android:layout="@layout/settings_layout">
-    <intent
-            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+        android:title="@string/misc_category_title"
+        android:key="miscellaneous"
+        app:layout="@layout/afl_preference_middle_card"
+        android:summary="@string/misc_category_summary">
+        <intent
             android:targetPackage="com.android.launcher3"
-            android:targetClass="com.android.launcher3.settings.SettingsMisc" />
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetClass="com.android.launcher3.settings.SettingsMisc"/>
     </Preference>
-
+    <Preference
+        android:icon="@drawable/ic_about"
+        app:layout="@layout/afl_preference_bottom_card"
+        android:title="@string/about"
+        android:key="about"
+        android:summary="@string/about_summary">
+        <intent
+            android:targetPackage="com.android.launcher3"
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetClass="com.android.launcher3.settings.SettingsAbout"/>
+    </Preference>
 </androidx.preference.PreferenceScreen>

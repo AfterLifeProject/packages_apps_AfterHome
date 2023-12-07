@@ -26,7 +26,10 @@
     <string name="google_folder_title" translatable="false">Google</string>
 
     <!-- General -->
-    <string name="settings_title">Home settings</string>
+    <string name="about">About</string>
+    <string name="about_summary">Let you know about this AfterLife launcher</string>
+    <string name="team_title">AfterLife team</string>
+    <string name="settings_title">AfterLife Home settings</string>
 
     <!-- Categories -->
     <string name="home_category_title">Home screen</string>

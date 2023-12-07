@@ -1,69 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2016-2023 crDroid Android Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
 <androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.launcher3">
-
-    <PreferenceCategory
-        android:title="@string/general_category_title">
-
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.launcher3"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/general_category_title">
         <SwitchPreference
-            android:key="pref_recents_meminfo"
+            android:persistent="true"
             android:title="@string/recents_meminfo_title"
+            android:key="pref_recents_meminfo"
             android:defaultValue="false"
-            android:persistent="true" />
-
+            app:layout="@layout/afl_preference_single"/>
         <com.android.launcher3.settings.preferences.CustomSeekBarPreference
-            android:key="pref_recents_opacity"
-            android:title="@string/background_opacity_title"
             android:persistent="true"
             android:max="100"
+            android:title="@string/background_opacity_title"
+            android:key="pref_recents_opacity"
+            android:defaultValue="100"
             android:min="0"
-            settings:units="%"
-            android:defaultValue="100" />
-   </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/actions_category_title">
-
-        <SwitchPreference
-            android:key="pref_recents_screenshot"
-            android:title="@string/recents_screenshot_title"
-            android:defaultValue="true"
-            android:persistent="true" />
-
-        <SwitchPreference
-            android:key="pref_recents_lens"
-            android:title="@string/recents_lens_title"
-            android:defaultValue="false"
-            android:persistent="true" />
-
-        <SwitchPreference
-            android:key="pref_recents_clear_all"
-            android:title="@string/recents_clear_all_title"
-            android:defaultValue="true"
-            android:persistent="true" />
-
-        <SwitchPreference
-            android:key="pref_recents_shake_clear_all"
-            android:title="@string/recents_shake_clear_all_title"
-            android:defaultValue="false"
-            android:persistent="true" />
+            settings:units="%"/>
     </PreferenceCategory>
-
+    <PreferenceCategory android:title="@string/actions_category_title">
+        <SwitchPreference
+            android:persistent="true"
+            android:title="@string/recents_screenshot_title"
+            android:key="pref_recents_screenshot"
+            android:defaultValue="true"
+            app:layout="@layout/afl_preference_top"/>
+        <SwitchPreference
+            android:persistent="true"
+            android:title="@string/recents_lens_title"
+            android:key="pref_recents_lens"
+            android:defaultValue="false"
+            app:layout="@layout/afl_preference_middle"/>
+        <SwitchPreference
+            android:persistent="true"
+            android:title="@string/recents_clear_all_title"
+            android:key="pref_recents_clear_all"
+            android:defaultValue="true"
+            app:layout="@layout/afl_preference_middle"/>
+        <SwitchPreference
+            android:persistent="true"
+            android:title="@string/recents_shake_clear_all_title"
+            android:key="pref_recents_shake_clear_all"
+            android:defaultValue="false"
+            app:layout="@layout/afl_preference_bottom"/>
+    </PreferenceCategory>
 </androidx.preference.PreferenceScreen>

@@ -36,4 +36,6 @@
 
     <!-- Quickspace -->
     <item type="id" name="reserved_container_workspace" />
+
+    <string name="about_fragment_name">com.android.launcher3.settings.SettingsAbout$AboutFragment</string>
 </resources>

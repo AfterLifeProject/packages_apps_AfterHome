@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceScreen
+        android:layout="@layout/afterlife_logo"
+        android:selectable="true"
+        android:key="afterlife_logo">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/AfterLifePrjkt13/packages_apps_Launcher3"/>
+    </PreferenceScreen>
+    <PreferenceCategory android:title="@string/team_title">
+        <Preference
+            android:icon="@drawable/ic_user"
+            android:persistent="false"
+            android:title="Romeo Delta Whiskey"
+            android:selectable="true"
+            android:key="about_credit01"
+            android:summary="Lead and source manager"
+            app:layout="@layout/afl_preference_top_card">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Romeo_Delta_Whiskey"/>
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_user"
+            android:persistent="false"
+            android:title="Ari Lesmana"
+            android:selectable="true"
+            android:key="about_credit01"
+            android:summary="Idea and source manager"
+            app:layout="@layout/afl_preference_middle_card">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/xarilsmn"/>
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_user"
+            android:persistent="false"
+            android:title="Aditya Eka Pranata"
+            android:selectable="true"
+            android:key="about_credit01"
+            android:summary="Source manager"
+            app:layout="@layout/afl_preference_bottom_card">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/aepranata"/>
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_user"
+            android:persistent="false"
+            android:title="ᄅ0ㄣ⇂XᴚƆ"
+            android:selectable="true"
+            android:key="about_credit01"
+            android:summary="Core, Designer UI/UX"
+            app:layout="@layout/afl_preference_top_card">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Corex1402"/>
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_user"
+            android:persistent="false"
+            android:title="jrinfected"
+            android:selectable="true"
+            android:key="about_credit01"
+            android:summary="Core, Designer UI/UX"
+            app:layout="@layout/afl_preference_middle_card">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/jrinfected"/>
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_user"
+            android:persistent="false"
+            android:title="Declan"
+            android:selectable="true"
+            android:key="about_credit01"
+            android:summary="Core, Designer UI/UX"
+            app:layout="@layout/afl_preference_middle_card">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/seklek"/>
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_user"
+            android:persistent="false"
+            android:title="nssʇıǝɹ #AFK"
+            android:selectable="true"
+            android:key="about_credit01"
+            android:summary="Core, Designer UI/UX"
+            app:layout="@layout/afl_preference_bottom_card">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/reitssu"/>
+        </Preference>
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

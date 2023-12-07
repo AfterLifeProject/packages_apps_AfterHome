@@ -227,6 +227,14 @@
             android:exported="true"
             android:autoRemoveFromRecents="true"  />
 
+        <!-- an About -->
+        <activity
+            android:theme="@style/HomeSettings.Theme"
+            android:label="@string/about"
+            android:name="com.android.launcher3.settings.SettingsAbout"
+            android:parentActivityName="com.android.launcher3.SettingsActivity"
+            android:autoRemoveFromRecents="true" />
+
         <provider
             android:name="com.android.launcher3.testing.TestInformationProvider"
             android:authorities="${packageName}.TestInfo"
