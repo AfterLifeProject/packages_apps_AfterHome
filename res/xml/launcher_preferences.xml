@@ -51,14 +51,14 @@
             android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
             android:targetClass="com.android.launcher3.settings.SettingsRecents"/>
     </Preference>
-    <!-- <Preference
+    <Preference
         android:icon="@drawable/ic_settings_suggestions"
         android:title="@string/suggestion_pref_screen_title"
         android:key="pref_suggestions"
         app:layout="@layout/afl_preference_middle_card"
         android:summary="@string/suggestion_pref_screen_desc">
         <intent android:action="android.settings.ACTION_CONTENT_SUGGESTIONS_SETTINGS"/>
-    </Preference> -->
+    </Preference>
     <Preference
         android:icon="@drawable/ic_settings_misc"
         android:title="@string/misc_category_title"
