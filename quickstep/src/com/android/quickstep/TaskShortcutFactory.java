@@ -26,6 +26,8 @@ import android.app.Activity;
 import android.app.ActivityManagerNative;
 import android.app.ActivityOptions;
 import android.app.IActivityManager;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Rect;
@@ -268,6 +270,39 @@ public interface TaskShortcutFactory {
         }
     }
 
+    class FloatingSystemShortcut extends SystemShortcut<BaseDraggingActivity> {
+        private static final String FREEFORM_PACKAGE = "com.libremobileos.freeform";
+        private static final String FREEFORM_INTENT = "com.libremobileos.freeform.START_FREEFORM";
+        private final TaskView mTaskView;
+        public FloatingSystemShortcut(BaseDraggingActivity activity, TaskIdAttributeContainer taskContainer) {
+            // TODO new icon?
+            super(R.drawable.ic_caption_desktop_button_foreground, R.string.recent_task_option_freeform,
+                    activity, taskContainer.getItemInfo(), taskContainer.getTaskView());
+            mTaskView = taskContainer.getTaskView();
+        }
+        @Override
+        public void onClick(View view) {
+            dismissTaskMenuView(mTarget);
+            RecentsView rv = mTarget.getOverviewPanel();
+            rv.switchToScreenshot(() -> {
+                rv.finishRecentsAnimation(true /* toRecents */, false /* shouldPip */, () -> {
+                    mTarget.returnToHomescreen();
+                    rv.getHandler().post(this::startLmoFreeform);
+                });
+            });
+        }
+        private void startLmoFreeform() {
+            final Task task = mTaskView.getTask();
+            final Intent intent = new Intent(FREEFORM_INTENT)
+                    .setPackage(FREEFORM_PACKAGE)
+                    .putExtra("packageName", task.key.getPackageName())
+                    .putExtra("activityName", task.getTopComponent().getClassName())
+                    .putExtra("userId", task.key.userId)
+                    .putExtra("taskId", task.key.id);
+            mTarget.getApplicationContext().sendBroadcast(intent);
+        }
+    }
+
     /**
      * Does NOT add split options in the following scenarios:
      * * 1. Taskbar is not present AND aren't at least 2 tasks in overview to show split options for
@@ -366,6 +401,18 @@ public interface TaskShortcutFactory {
                     activity.getContentResolver(),
                     Settings.Global.DEVELOPMENT_ENABLE_FREEFORM_WINDOWS_SUPPORT, 0) != 0
                     && !isDesktopModeSupported();
+        }
+    };
+
+    TaskShortcutFactory FLOATING = new TaskShortcutFactory() {
+        @Override
+        public List<SystemShortcut> getShortcuts(BaseDraggingActivity activity,
+                TaskIdAttributeContainer taskContainer) {
+            final Task task  = taskContainer.getTask();
+            if (!task.isDockable) {
+                return null;
+            }
+            return Collections.singletonList(new FloatingSystemShortcut(activity, taskContainer));
         }
     };
 
